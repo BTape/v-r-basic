@@ -32,12 +32,13 @@
   border-radius: 6px;
   cursor: pointer;
   overflow: hidden;
-  transition: width 1s ease, color 0.5s ease;
+  transition: width 1s ease, color 0.5s ease, border 0.5s ease,
+    backgound-color 1s ease;
   width: 3rem;
   display: flex;
   align-items: center;
 
-  > p {
+  > div {
     display: none;
     overflow: hidden;
     width: 0%;
@@ -47,16 +48,18 @@
 
   &.active {
     font-weight: 500;
-    color: #fff;
+    color: #eee;
+    background-color: #ffffff50;
+    border: 1px solid #ffffff90 !important;
   }
 
   &:hover,
   &.active {
     filter: drop-shadow(0 0 0.5rem #646cff66);
-    border-color: #ffffff50;
+    border-color: #ffffff40;
     width: 10rem;
 
-    > p {
+    > div {
       margin-left: 0.25rem;
       display: flex;
       width: 100%;
@@ -77,13 +80,14 @@
     justify-content: center;
 
     &:hover {
-      color: #fff;
+      color: #eee;
       width: fit-content;
     }
   }
 
   > img {
     height: 100%;
+    object-fit: contain;
     aspect-ratio: 1/1;
 
     &.spin {

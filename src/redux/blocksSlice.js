@@ -3,6 +3,7 @@ import vite from "/vite.svg";
 import react from "/react.svg";
 import redux from "/redux.png";
 import redis from "/redis.svg";
+import router from "/router.svg";
 
 export const blocksSlice = createSlice({
   name: "blocks",
@@ -41,7 +42,7 @@ export const blocksSlice = createSlice({
         ],
       },
       {
-        name: "redux-toolkit",
+        name: "redux",
         icon: redux,
         class: "",
         pages: [
@@ -64,6 +65,24 @@ export const blocksSlice = createSlice({
           { name: "testDeLosTest" },
           { name: "ocupandoEspacio" },
         ],
+      },
+      {
+        name: "router",
+        icon: router,
+        class: "",
+        pages: [],
+      },
+      {
+        name: "code-blocks",
+        icon: null,
+        class: "",
+        pages: [],
+      },
+      {
+        name: "sonner",
+        icon: null,
+        class: "",
+        pages: [],
       },
     ],
     element: null,
