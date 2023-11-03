@@ -8,28 +8,24 @@ import Bar from "../layout/Bar";
 
 import React from "react";
 import { useSelector } from "react-redux";
+import Elements from "../pages/Elements";
 
-const CustomRoutes = () => {
-  const blocks = useSelector((state) => state.blocks);
+//   return blocks.map((block) => {
+//     <Route path={block?.name} element={<Elements />} />;
+//   });
+// };
 
-  return blocks?.map((block) => {
-    return (
-      <Route path={block?.name} element={block?.element}>
-        {block?.pages?.map((page) => {
-          return <Route path={page?.name} element={page?.element} />;
-        })}
+const Router = () => {
+  //   const blocks = useSelector((state) => state.blocks);
+
+  return createBrowserRouter(
+    createRoutesFromElements(
+      <Route element={<Bar />}>
+        <Route index element={<App />} />
+        <Route path=":element" element={<Elements />} />
       </Route>
-    );
-  });
+    )
+  );
 };
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route element={<Bar />}>
-      <Route index element={<App />} />
-      {CustomRoutes}
-    </Route>
-  )
-);
-
-export { router };
+export default Router;

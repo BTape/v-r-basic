@@ -16,7 +16,7 @@ export const blocksSlice = createSlice({
       },
       { name: "vite", icon: viteLogo, class: "", element: "", pages: [] },
     ],
-    active: null,
+    element: null,
   },
 
   reducers: {
