@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import viteLogo from "/vite.svg";
-import reactLogo from "/react.svg";
+import vite from "/vite.svg";
+import react from "/react.svg";
+import redux from "/redux.png";
 
 export const blocksSlice = createSlice({
   name: "blocks",
@@ -9,21 +10,42 @@ export const blocksSlice = createSlice({
     modules: [
       {
         name: "react",
-        icon: reactLogo,
+        icon: react,
         class: "spin",
-        element: "",
-        pages: [{ name: "react-router-dom", element: "" }],
+        pages: [
+          { name: "react-router-dom" },
+          { name: "estoEsUnaPrueba" },
+          { name: "test2" },
+          { name: "testeando" },
+          { name: "test4" },
+          { name: "nombreLargo1" },
+          { name: "otroNombreLargo2" },
+          { name: "test3" },
+          { name: "testDeLosTest" },
+          { name: "ocupandoEspacio" },
+          { name: "nombreLargo11231" },
+          { name: "otroNombreLargo212312" },
+          { name: "test3543" },
+          { name: "testDeLosTest23983" },
+        ],
       },
-      { name: "vite", icon: viteLogo, class: "", element: "", pages: [] },
+      {
+        name: "vite",
+        icon: vite,
+        class: "",
+        pages: [{ name: "config" }],
+      },
+      {
+        name: "redux-toolkit",
+        icon: redux,
+        class: "",
+        pages: [{ name: "config" }],
+      },
     ],
     element: null,
   },
 
-  reducers: {
-    // pageSet: (state, action) => {
-    //   state.page = action.payload;
-    // },
-  },
+  reducers: {},
 
   extraReducers(builder) {
     // builder.addCase(pagesGet.pending, (state) => {

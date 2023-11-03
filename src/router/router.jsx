@@ -9,6 +9,7 @@ import Bar from "../layout/Bar";
 import React from "react";
 import { useSelector } from "react-redux";
 import Elements from "../pages/Elements";
+import Page from "../pages/Page";
 
 //   return blocks.map((block) => {
 //     <Route path={block?.name} element={<Elements />} />;
@@ -22,7 +23,8 @@ const Router = () => {
     createRoutesFromElements(
       <Route element={<Bar />}>
         <Route index element={<App />} />
-        <Route path=":element" element={<Elements />} />
+        <Route path=":name" element={<Elements />} />
+        <Route path=":name/:page" element={<Page />} />
       </Route>
     )
   );
