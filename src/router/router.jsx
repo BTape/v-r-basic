@@ -7,7 +7,7 @@ import App from "../App";
 import Bar from "../layout/Bar";
 
 import React from "react";
-import Elements from "../pages/Elements";
+import Elements from "../Modules/Elements";
 import Page from "../pages/Page";
 
 const Router = () => {
